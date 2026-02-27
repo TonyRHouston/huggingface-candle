@@ -4,7 +4,7 @@ name: Continuous integration
 jobs:
   check:
     name: Check
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -37,7 +37,7 @@ jobs:
       run: "export RUSTFLAGS=\"-C target-feature=neon\"\ncargo check --workspace \n"
   test:
     name: Test Suite
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         os:
