@@ -37,7 +37,7 @@ jobs:
         name: wheels-linux-${{ matrix.target }}
         path: ./candle-pyo3/dist
   windows:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         target:
@@ -67,7 +67,7 @@ jobs:
         name: wheels-windows-${{ matrix.target }}
         path: ./candle-pyo3/dist
   macos:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         target:
